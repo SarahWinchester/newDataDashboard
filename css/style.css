@@ -1,3 +1,7 @@
 body{
     background-image: url(../assets/what-the-hex-dark.png)
 }
+nav{
+    height: 7vh;
+    background-color: #8b888888;
+}
