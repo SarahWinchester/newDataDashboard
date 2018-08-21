@@ -9,31 +9,42 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css"> -->
     <!--Style-->
     <title>Document</title>
 </head>
 <body>
     <nav class="row ">
-        <img class="col-1 max-width: 100%  max-width: 100%" src="../assets/L_RGB_-03.png" alt="">
+        <img class="col-1 w-auto" src="./assets/L_RGB_-03.png" alt="">
     </nav>
-
-
-
-
-    <select name="Sedes" id="sedes">
-        <!-- <option id="sedesTitle">Sedes</option> -->
-    </select>
-    <select class=""" id="generationList">
-        <!-- <option>Generacion</option> -->
-    </select>
-
-
+    <div class="row" id="searchSite">
+        <select name="Sedes" id="sedes" class="col-4 offset-3">
+            <!-- <option id="sedesTitle">Sedes</option> -->
+        </select>
+        <select class=""" id="generationList">
+            <!-- <option>Generacion</option> -->
+        </select>
+        
+    </div>
+    <section> 
+        <div class="card" id="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{photo}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title"> {{name}}</h5>
+                <a href="#" class="btn btn-primary">Button Proxi</a>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    
     <!--Js Scripts-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>	
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <!-- <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script> -->
     <script src="./js/data.js"></script>    
     <script src="./js/app.js"></script>
 </body>

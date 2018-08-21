@@ -2,6 +2,10 @@ body{
     background-image: url(../assets/what-the-hex-dark.png)
 }
 nav{
-    height: 7vh;
+    height: 12vh;
     background-color: #8b888888;
+}
+#searchSite{
+    height: 5vh;
+    margin: 5vh;
 }

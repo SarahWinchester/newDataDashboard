@@ -1,5 +1,6 @@
 console.log(data);
 
+// DATA IN SELECT
 var obtenerSedes = function (dataObj) {
     var select = document.getElementById("sedes");
     var dataKey = Object.keys(dataObj)
@@ -47,8 +48,11 @@ function obtenerAlumnas(e) {
     console.log(dataSedes2)
     var studentsGen= e.target.value;
     console.log(studentsGen);
-    var studentInfo= data[dataSedes2][studentsGen].students;
+    var studentInfo= data[dataSedes2][studentsGen];
     console.log(studentInfo);
+    var studentPersonalData= data[dataSedes2][studentsGen].students;
+    console.log(studentPersonalData);
+
 }
 
 //llamada a select de generacion
@@ -59,3 +63,4 @@ var sedes = document.getElementById("sedes")
 sedes.addEventListener("change", obtenerGeneracion);
 //Llamada de  a las geneneraciones individuales 
 obtenerSedes(data);
+
