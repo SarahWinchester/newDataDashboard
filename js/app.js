@@ -44,16 +44,34 @@ var obtenerGeneracion = function(e){
 }
 
 function obtenerAlumnas(e) {
+    //trae el valor del elemento seleccionado de Sedes
     var dataSedes2 = document.getElementById("sedes").value;
     console.log(dataSedes2)
+    //trae el elemento seleccionado de generacion
     var studentsGen= e.target.value;
     console.log(studentsGen);
+    //trae la informacion de la generacion 
     var studentInfo= data[dataSedes2][studentsGen];
     console.log(studentInfo);
+    //trae el objeto con estudiantes
     var studentPersonalData= data[dataSedes2][studentsGen].students;
     console.log(studentPersonalData);
+    var arrayObj= Object.keys(data[dataSedes2][studentsGen]).map(function(k) { return data[k]; });
 
-}
+    //trae el template
+    var cardTemplate = document.getElementById("cardTemplate");
+    var cardTemplateHtml= cardTemplate.innerHTML;
+    var cardHtml = "";
+    //iterar sobre el data 
+    for(var key in arrayObj){
+        cardHtml += cardTemplateHtml
+        // .replace(/{{photo}}/g,studentPersonalData[key][photo])
+        .replace("{{name}}", arrayObj[key].name);
+    }
+    document.getElementById("cardsHolder").innerHTML = cardHtml ;
+
+
+    }
 
 //llamada a select de generacion
 var generationList = document.getElementById("generationList");
