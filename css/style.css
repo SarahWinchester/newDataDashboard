@@ -17,3 +17,6 @@ nav{
 #cardsHolder{
     display: inline-block;
 }
+#status{
+    margin: 5vh;
+}
