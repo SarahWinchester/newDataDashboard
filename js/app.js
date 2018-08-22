@@ -56,17 +56,15 @@ function obtenerAlumnas(e) {
     //trae el objeto con estudiantes
     var studentPersonalData= data[dataSedes2][studentsGen].students;
     console.log(studentPersonalData);
-    var arrayObj= Object.keys(data[dataSedes2][studentsGen]).map(function(k) { return data[k]; });
-
     //trae el template
     var cardTemplate = document.getElementById("cardTemplate");
     var cardTemplateHtml= cardTemplate.innerHTML;
     var cardHtml = "";
     //iterar sobre el data 
-    for(var key in arrayObj){
+    for(var key in studentPersonalData){
         cardHtml += cardTemplateHtml
         // .replace(/{{photo}}/g,studentPersonalData[key][photo])
-        .replace("{{name}}", arrayObj[key].name);
+        .replace(/{{name}}/g, cardTemplateHtml[key][name]);
     }
     document.getElementById("cardsHolder").innerHTML = cardHtml ;
 
