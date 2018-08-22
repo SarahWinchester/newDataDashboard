@@ -5,13 +5,13 @@ var obtenerSedes = function (dataObj) {
     var select = document.getElementById("sedes");
     var dataKey = Object.keys(dataObj)
     console.log(dataKey, dataKey.length);
-
+    
     var optionDefault= document.createElement("option");
     optionDefault.innerHTML="SEDE"
     optionDefault.setAttribute("disabled", true)
     optionDefault.setAttribute("selected",true);
     select.appendChild(optionDefault);
-
+    
     for (var i =0; i < dataKey.length;i++){
         var option = document.createElement("option");
         option.setAttribute("value", dataKey[i]);
@@ -56,20 +56,19 @@ function obtenerAlumnas(e) {
     //trae el objeto con estudiantes
     var studentPersonalData= data[dataSedes2][studentsGen].students;
     console.log(studentPersonalData);
+    
     //trae el template
     var cardTemplate = document.getElementById("cardTemplate");
     var cardTemplateHtml= cardTemplate.innerHTML;
+    cardTemplateHtml.innerHTML = "";
+    
     var cardHtml = "";
     //iterar sobre el data 
-    for(var key in studentPersonalData){
-        cardHtml += cardTemplateHtml
-        // .replace(/{{photo}}/g,studentPersonalData[key][photo])
-        .replace(/{{name}}/g, cardTemplateHtml[key][name]);
+    for(var i=0 ; i<studentPersonalData.length;i++){
+        cardHtml+= cardTemplateHtml.replace("{{name}}",studentPersonalData[i].name);
     }
     document.getElementById("cardsHolder").innerHTML = cardHtml ;
-
-
-    }
+}1
 
 //llamada a select de generacion
 var generationList = document.getElementById("generationList");
