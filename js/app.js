@@ -56,11 +56,11 @@ function obtenerAlumnas(e) {
     //trae el objeto con estudiantes
     var studentPersonalData= data[dataSedes2][studentsGen].students;
     console.log(studentPersonalData);
-    
+    var length= data[dataSedes2][studentsGen].students.length-1;
+    document.getElementById("numberStudents").innerHTML= length
     //trae el template
     var cardTemplate = document.getElementById("cardTemplate");
     var cardTemplateHtml= cardTemplate.innerHTML;
-    cardTemplateHtml.innerHTML = "";
     
     var cardHtml = "";
     //iterar sobre el data 
@@ -68,8 +68,15 @@ function obtenerAlumnas(e) {
         cardHtml+= cardTemplateHtml.replace("{{name}}",studentPersonalData[i].name);
     }
     document.getElementById("cardsHolder").innerHTML = cardHtml ;
-}1
+    obtenerRatings(studentsGen);
+}
+function obtenerRatings(studentsGen){
+    var dataValue = document.getElementById("sedes").value;
+    var dataRatings= studentsGen;
+    var allDataRatings= data[dataValue][dataRatings].ratings;
+    console.log(allDataRatings);
 
+}
 //llamada a select de generacion
 var generationList = document.getElementById("generationList");
 generationList.addEventListener("change",obtenerAlumnas)

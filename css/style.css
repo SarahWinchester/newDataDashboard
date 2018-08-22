@@ -1,5 +1,10 @@
 body{
-    background-image: url(../assets/what-the-hex-dark.png)
+    background-image: url(../assets/what-the-hex-dark.png);
+    color: rgb(255, 255, 255);  
+}
+.spanNumber{
+    color: rgb(255, 255, 255);
+    margin: 5px;    
 }
 nav{
     height: 12vh;
@@ -8,4 +13,7 @@ nav{
 #searchSite{
     height: 5vh;
     margin: 5vh;
+}
+#cardsHolder{
+    display: inline-block;
 }
