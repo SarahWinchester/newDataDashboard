@@ -74,9 +74,9 @@ function obtenerRatings(studentsGen){
     var dataValue = document.getElementById("sedes").value;
     var dataRatings= studentsGen;
     var allDataRatings= data[dataValue][dataRatings].ratings;
-    console.log(allDataRatings);
+    // console.log(allDataRatings);
     var dataStudentInfo= data[dataValue][dataRatings].students;
-    console.log(dataStudentInfo);
+    // console.log(dataStudentInfo);
     var active= 0;
     var inactive=0;
     for(var j=0; j<dataStudentInfo.length-1; j++){
@@ -87,9 +87,10 @@ function obtenerRatings(studentsGen){
         if(dataStudentInfo[j].active=== true){
             active++
         }
-        console.log(active,inactive)
+        // console.log(active,inactive)
         document.getElementById("activeStudents").innerHTML=active;
         document.getElementById("inactiveStudents").innerHTML=inactive;
+        document.getElementById("studentsOut").innerHTML= Math.ceil((inactive/dataStudentInfo.length)*100) + '%';
     }
     
 }
